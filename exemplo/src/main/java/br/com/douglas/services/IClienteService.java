@@ -4,8 +4,10 @@ import br.com.douglas.domain.Cliente;
 
 public interface IClienteService {
 
-    public void salvar(Cliente cliente);
+    public void salvar();
 
     public Cliente buscarPorCPF(Long cpf);
+
+    
 
 }
