@@ -1,7 +1,6 @@
 package br.com.douglas.services;
 
 import br.com.douglas.dao.IClienteDAO;
-import br.com.douglas.dao.IClienteDAO.IClienteDAO;
 import br.com.douglas.domain.Cliente;
 
 public class ClienteService implements IClienteService {
@@ -21,6 +20,12 @@ public class ClienteService implements IClienteService {
     public Cliente buscarPorCPF(Long cpf) {
         // Lógica para buscar o cliente por CPF
         return null; // Retornar o cliente encontrado ou null se não encontrado
+    }
+
+    @Override
+    public void salvar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'salvar'");
     }
 
 }
