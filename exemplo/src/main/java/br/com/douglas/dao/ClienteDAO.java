@@ -31,6 +31,12 @@ public class ClienteDAO extends GenericDAO<Cliente, Long> implements IClienteDAO
 		
 	}
 
+	@Override
+	public void salvar(Cliente cliente) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'salvar'");
+	}
+
 
 
 }

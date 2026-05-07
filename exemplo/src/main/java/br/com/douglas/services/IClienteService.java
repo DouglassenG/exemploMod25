@@ -8,6 +8,8 @@ public interface IClienteService {
 
     public Cliente buscarPorCPF(Long cpf);
 
+    void salvar(Cliente cliente);
+
     
 
 }

@@ -10,5 +10,7 @@ import br.com.douglas.domain.Cliente;
  */
 public interface IClienteDAO extends IGenericDAO<Cliente, Long> {
 
+    public void salvar(Cliente cliente);
+
 }
 
