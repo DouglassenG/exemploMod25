@@ -2,30 +2,20 @@ package br.com.douglas.services;
 
 import br.com.douglas.dao.IClienteDAO;
 import br.com.douglas.domain.Cliente;
+import br.com.douglas.services.generic.GenericService;
 
-public class ClienteService implements IClienteService {
-
-    private IClienteDAO clienteDAO;
+/**
+ * @author douglas
+ */
+public class ClienteService extends GenericService<Cliente, Long> implements IClienteService {
 
     public ClienteService(IClienteDAO clienteDAO) {
-        this.clienteDAO = clienteDAO; 
-    }
-
-    @Override
-    public void salvar(Cliente cliente) {
-        clienteDAO.salvar(cliente); // Lógica para salvar o cliente usando o DAO
+        super(clienteDAO);
     }
 
     @Override
     public Cliente buscarPorCPF(Long cpf) {
-        // Lógica para buscar o cliente por CPF
-        return null; // Retornar o cliente encontrado ou null se não encontrado
-    }
-
-    @Override
-    public void salvar() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'salvar'");
+        return this.dao.consultar(cpf);
     }
 
 }
